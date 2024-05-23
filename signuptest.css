@@ -1,0 +1,1388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins-Regular', sans-serif;
+}
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.limiter2 {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
+
+.container-login100 {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(0deg, rgb(0 0 0 / 64%), rgb(0 0 0 / 0%)), url('../includes/images/wireless.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    animation: changeBackground 10s ease-in-out infinite;
+}
+
+@keyframes changeBackground {
+
+    0%,
+    0% {
+        background-image: url('../includes/images/wireless.png');
+    }
+
+    50%,
+    100% {
+        background-image: url('../includes/images/wireless3.png');
+    }
+
+    /*50%, 100% {
+    background-image: url('../images/main-slider-2-1.jpg');
+  }*/
+}
+
+.login100-pic {
+    width: 316px;
+}
+
+/* Apply tilt effect on hover for all screens */
+
+
+.login100-pic {
+    width: 400x;
+}
+
+.login100-pic img {
+    max-width: 100%;
+}
+
+.signup-form-title {
+
+    padding-bottom: 54px;
+    font-family: 'Poppins-bold';
+    font-size: 24px;
+
+    line-height: 1.2;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    display: block;
+
+
+}
+
+.login100-form-title {
+
+    padding-bottom: 54px;
+    font-family: 'poppins-bold';
+    font-size: 24px;
+
+    line-height: 1.2;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    display: block;
+
+
+}
+
+#letter-orange {
+    color: #f58634;
+}
+
+#letter-lightblue {
+    color: #5881c3;
+}
+
+#letter-yellow {
+    color: #fd6349;
+}
+
+#letter-green {
+    color: #0a7740;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.word {
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+@keyframes flash {
+    0% {
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: #ffcc00;
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+.flash {
+    animation: flash 0.5s infinite;
+}
+
+
+
+/*------------------------------------------------------------------
+[ Focus ]*/
+.focus-input100 {
+    display: block;
+    position: absolute;
+    border-radius: 25px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 0px 0px;
+    color: rgba(87, 184, 70, 0.8);
+}
+
+.input100:focus+.focus-input100 {
+    -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
+    animation: anim-shadow 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes anim-shadow {
+    to {
+        box-shadow: 0px 0px 70px 25px;
+        opacity: 0;
+    }
+}
+
+@keyframes anim-shadow {
+    to {
+        box-shadow: 0px 0px 70px 25px;
+        opacity: 0;
+    }
+}
+
+.symbol-input100 {
+    font-size: 15px;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    border-radius: 25px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 35px;
+    pointer-events: none;
+    color: #666666;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.input100:focus+.focus-input100+.symbol-input100 {
+    color: #57b846;
+    padding-left: 28px;
+}
+
+/*---------------------------------------------*/
+.wrap-input100 {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+
+.input100 {
+    font-family: Poppins-Medium;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+
+    display: block;
+    width: 100%;
+    background: #e6e6e6;
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 30px 0 68px;
+}
+
+
+/*------------------------------------------------------------------
+[ Button ]*/
+.cnt {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cnt.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cnt input {
+    width: 15px;
+    height: 15px;
+    background: red;
+}
+
+.cnt label {
+    color: #ece9e9;
+    user-select: none;
+    padding-left: 5px;
+}
+
+.cnt .pass-link {
+    color: "";
+    margin-top: -8px;
+}
+
+.signup-link {
+    color: #fcf6f6;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pass-link a,
+.signup-link a {
+    color: #4158d0;
+    text-decoration: none;
+}
+
+form .pass-link a:hover,
+form .signup-link a:hover {
+    text-decoration: underline;
+}
+
+.field input[type="submit"] {
+    color: #fff;
+
+    border-radius: 15px;
+    padding-left: 75px;
+    padding-right: 75px;
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    transition: all 0.3s ease;
+}
+
+.field input[type="submit"]:active {
+    transform: scale(0.95);
+}
+
+
+
+.container-signup100-form-btn {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 20px;
+
+
+
+}
+
+.container-signup100-form-btn button {
+    flex: 1;
+    /* Ensures buttons are evenly distributed */
+    margin: 0 5px;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    border-radius: 15px;
+    /* Optional: Adjust the margin between buttons */
+}
+
+.login100-form-btn {
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: #57b846;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+
+
+
+.container {
+    display: -webkit-box;
+    background-image: url('../includes/images/wireless2.png');
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+
+
+.container button.hidden {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.container form {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    /* Adds padding for better spacing */
+    height: auto;
+    /* Adjusts height to content */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+.form-container {
+
+
+    height: 100%;
+    /* Uses full height of the container */
+    transition: all 0.6s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    /* Ensures scrolling if content overflows */
+}
+
+.sign-in {
+    left: 0;
+    margin-top: 110px;
+    width: 50%;
+    z-index: 2;
+
+}
+
+
+
+.container.active .sign-in {
+    transform: translateX(100%);
+    position: absolute;
+    /*removing login span and button */
+    display: none;
+}
+
+.sign-up {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+
+
+
+    /* Ensures scrolling if content overflows */
+}
+
+
+.container.active .sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move {
+
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+
+
+.toggle-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.container.active .toggle-container {
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+
+}
+
+.toggle {
+    height: 100%;
+    position: relative;
+    left: -100%;
+
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle {
+    transform: translateX(50%);
+}
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left {
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left {
+    transform: translateX(0);
+
+}
+
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.active .toggle-right {
+    transform: translateX(200%);
+}
+
+
+/* Style for the file input container */
+.chooseimg {
+    position: relative;
+    width: 100%;
+}
+
+/* Style for the input field */
+.chooseimg input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    color: #666666;
+
+    background: #e6e6e6;
+
+    transition: background-color 0.3s;
+}
+
+.chooseimg input[type="file"]:hover {
+    background-color: #e0e0e0;
+}
+
+.chooseimg input[type="file"]:focus {
+    background-color: #dcdcdc;
+}
+
+/* Style for the focus indicator */
+.chooseimg .focus-input100 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: all 0.4s;
+}
+
+/* Style for the icon */
+.chooseimg .symbol-input100 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    color: #999;
+    cursor: pointer;
+}
+
+/* Style for the icon */
+.chooseimg .symbol-input100 i {
+    font-size: 20px;
+}
+
+/* Style for the focus indicator when input is focused */
+.chooseimg input[type="file"]:focus+.focus-input100 {
+    background-color: #512da8;
+}
+
+/* Style for the icon when input is focused */
+.chooseimg input[type="file"]:focus+.focus-input100+.symbol-input100 i {
+    color: #512da8;
+}
+
+/*------------------------------------------------------------------
+[ Alert validate ]*/
+
+.validate-input {
+    position: relative;
+}
+
+.alert-validate::before {
+    content: attr(data-validate);
+    position: absolute;
+    max-width: 70%;
+    background-color: white;
+    border: 1px solid #c80000;
+    border-radius: 13px;
+    padding: 4px 25px 4px 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 8px;
+    pointer-events: none;
+
+    font-family: Poppins-Medium;
+    color: #c80000;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: left;
+
+    visibility: hidden;
+    opacity: 0;
+
+    -webkit-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+    content: "\f06a";
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+    color: #c80000;
+    font-size: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 13px;
+}
+
+.alert-validate:hover:before {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*------------------------------------------------------------------
+[ Responsive Nessbx]*/
+
+
+
+@media (max-width: 992px) {
+    .wrap-login100 {
+        padding: 177px 90px 33px 85px;
+    }
+
+    .login100-pic {
+        width: 180%;
+    }
+
+    .login100-form {
+        width: 35%;
+    }
+
+    .alert-validate::before {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-container.sign-in {
+        width: 50%;
+        margin-top: 145px;
+        margin-left: -20px;
+    }
+
+    /* Adjustments for form elements */
+    .form-container.sign-in form {
+        padding: 0 20px;
+
+    }
+
+    .form-container.sign-in .login100-form-title {
+        font-size: 20px;
+        /* Adjusted font size for smaller screens */
+        padding-bottom: 30px;
+        /* Reduced padding bottom */
+    }
+
+    .form-container.sign-in .wrap-input100 {
+        margin-bottom: 15px;
+        /* Adjusted margin bottom */
+    }
+
+    .form-container.sign-in .input100 {
+        padding: 0 15px;
+        /* Adjusted padding */
+    }
+
+    .form-container.sign-in .container-login100-form-btn {
+        padding-top: 10px;
+
+        /* Reduced padding top */
+    }
+
+    .form-container.sign-in .text-center.p-t-12 {
+        margin-top: 20px;
+        /* Adjusted margin top */
+    }
+
+    .fa {
+        margin-inline-start: 210px;
+    }
+
+
+
+    .login100-pic {
+        width: 100%;
+        margin-bottom: 30px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+
+
+    .form-container.sign-up {
+        width: 50%;
+        margin-top: 120px;
+        margin-left: -21px;
+    }
+
+    /* Adjustments for form elements */
+    .form-container.sign-up form {
+        padding: 0 20px;
+
+    }
+
+    .form-container.sign-up .login100-form-title {
+        font-size: 20px;
+        /* Adjusted font size for smaller screens */
+        padding-bottom: 30px;
+        /* Reduced padding bottom */
+    }
+
+    .form-container.sign-up .wrap-input100 {
+        margin-bottom: 15px;
+        /* Adjusted margin bottom */
+    }
+
+    .form-container.sign-up .input100 {
+        padding: 0 15px;
+        /* Adjusted padding */
+    }
+
+    .form-container.sign-up .container-login100-form-btn {
+        padding-top: 10px;
+        /* Reduced padding top */
+    }
+
+    .form-container.sign-up .text-center.p-t-12 {
+        margin-top: 20px;
+        /* Adjusted margin top */
+    }
+
+}
+
+@media (max-width: 640px) {
+    .form-container.sign-in {
+        width: 50%;
+        margin-top: 145px;
+        margin-left: -20px;
+    }
+
+    /* Adjustments for form elements */
+    .form-container.sign-in form {
+        padding: 0 20px;
+
+    }
+
+    .form-container.sign-in .login100-form-title {
+        font-size: 20px;
+        /* Adjusted font size for smaller screens */
+        padding-bottom: 30px;
+        /* Reduced padding bottom */
+    }
+
+    .form-container.sign-in .wrap-input100 {
+        margin-bottom: 15px;
+        /* Adjusted margin bottom */
+    }
+
+    .form-container.sign-in .input100 {
+        padding: 0 15px;
+        /* Adjusted padding */
+    }
+
+    .form-container.sign-in .container-login100-form-btn {
+        padding-top: 10px;
+
+        /* Reduced padding top */
+    }
+
+    .form-container.sign-in .text-center.p-t-12 {
+        margin-top: 20px;
+        /* Adjusted margin top */
+    }
+
+    .fa {
+        margin-inline-start: 180px;
+    }
+
+
+
+    .login100-pic {
+        width: 140%;
+        margin-bottom: 30px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .form-container.sign-up {
+        width: 50%;
+        margin-top: 120px;
+        margin-left: -21px;
+    }
+
+    .cnt {
+        display: inline;
+        width: 100%;
+        height: 55px;
+        font-size: 16px;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: 35px;
+    }
+
+    .toggle-left.login100-pic {
+        margin-bottom: 33px;
+    }
+
+    /* Adjustments for form elements */
+    .form-container.sign-up form {
+        padding: 0 20px;
+
+    }
+
+    .form-container.sign-up .login100-form-title {
+        font-size: 20px;
+        /* Adjusted font size for smaller screens */
+        padding-bottom: 30px;
+        /* Reduced padding bottom */
+    }
+
+    .form-container.sign-up .wrap-input100 {
+        margin-bottom: 15px;
+        /* Adjusted margin bottom */
+    }
+
+    .form-container.sign-up .input100 {
+        padding: 0 15px;
+        /* Adjusted padding */
+    }
+
+    .form-container.sign-up .container-login100-form-btn {
+        padding-top: 10px;
+        /* Reduced padding top */
+    }
+
+    .form-container.sign-up .text-center.p-t-12 {
+        margin-top: 20px;
+        /* Adjusted margin top */
+    }
+
+}
+
+@media (max-width: 580px) {
+    .form-container.sign-in {
+        width: 50%;
+        margin-top: 145px;
+        margin-left: -15px;
+    }
+
+    /* Adjustments for form elements */
+    .form-container.sign-in form {
+        padding: 0 20px;
+
+    }
+
+    .form-container.sign-in .login100-form-title {
+        font-size: 20px;
+        /* Adjusted font size for smaller screens */
+        padding-bottom: 30px;
+        /* Reduced padding bottom */
+    }
+
+    .form-container.sign-in .wrap-input100 {
+        margin-bottom: 15px;
+        /* Adjusted margin bottom */
+    }
+
+    .form-container.sign-in .input100 {
+        padding: 0 15px;
+        /* Adjusted padding */
+    }
+
+    .form-container.sign-in .container-login100-form-btn {
+        padding-top: 10px;
+
+        /* Reduced padding top */
+    }
+
+    .form-container.sign-in .text-center.p-t-12 {
+        margin-top: 20px;
+        /* Adjusted margin top */
+    }
+
+    .form-container.sign-in.cnt {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .form-container.sign-in.cnt.checkbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-container.sign-in.cnt input {
+        width: 15px;
+        height: 15px;
+        background: red;
+    }
+
+    .form-container.sign-in.cnt label {
+        color: #f3f2f2;
+        user-select: none;
+        padding-left: 5px;
+    }
+
+    .form-container.sign-in.cnt .pass-link {
+        color: "";
+        margin-top: -8px;
+    }
+
+    .form-container.sign-in.symbol-input100 {
+        margin-inline-start: 130px;
+    }
+
+    .fa {
+        margin-inline-start: 140px;
+    }
+
+    .login100-pic {
+        width: 100%;
+        margin-bottom: 30px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .form-container.sign-up {
+        width: 50%;
+        margin-top: 120px;
+        margin-left: -21px;
+    }
+
+    /* Adjustments for form elements */
+    .form-container.sign-up form {
+        padding: 0 20px;
+
+    }
+
+    .form-container.sign-up .login100-form-title {
+        font-size: 20px;
+        /* Adjusted font size for smaller screens */
+        padding-bottom: 30px;
+        /* Reduced padding bottom */
+    }
+
+    .form-container.sign-up .wrap-input100 {
+        margin-bottom: 15px;
+        /* Adjusted margin bottom */
+    }
+
+    .form-container.sign-up .input100 {
+        padding: 0 15px;
+        /* Adjusted padding */
+    }
+
+    .form-container.sign-up .container-login100-form-btn {
+        padding-top: 10px;
+        /* Reduced padding top */
+    }
+
+    .form-container.sign-up .text-center.p-t-12 {
+        margin-top: 20px;
+        /* Adjusted margin top */
+    }
+
+}
+
+@media (max-width: 490px) {
+    .form-container.sign-in {
+        width: 50%;
+        margin-top: 145px;
+        margin-left: -15px;
+    }
+
+    /* Adjustments for form elements */
+    .form-container.sign-in form {
+        padding: 0 20px;
+
+    }
+
+    .form-container.sign-in .login100-form-title {
+        font-size: 20px;
+        /* Adjusted font size for smaller screens */
+        padding-bottom: 30px;
+        /* Reduced padding bottom */
+    }
+
+    .form-container.sign-in .wrap-input100 {
+        margin-bottom: 15px;
+        /* Adjusted margin bottom */
+    }
+
+    .form-container.sign-in .input100 {
+        padding: 0 15px;
+        /* Adjusted padding */
+    }
+
+    .form-container.sign-in .container-login100-form-btn {
+        padding-top: 10px;
+
+        /* Reduced padding top */
+    }
+
+    .form-container.sign-in .text-center.p-t-12 {
+        margin-top: 20px;
+        /* Adjusted margin top */
+    }
+
+    .form-container.sign-in.cnt {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .form-container.sign-in.cnt.checkbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-container.sign-in.cnt input {
+        width: 15px;
+        height: 15px;
+        background: red;
+    }
+
+    .form-container.sign-in.cnt label {
+        color: #f3f2f2;
+        user-select: none;
+        padding-left: 5px;
+    }
+
+    .form-container.sign-in.cnt .pass-link {
+        color: "";
+        margin-top: -8px;
+    }
+
+    .form-container.sign-in.symbol-input100 {
+        margin-inline-start: 130px;
+    }
+
+    .fa {
+        margin-inline-start: 140px;
+    }
+
+    .login100-pic {
+        width: 100%;
+        margin-bottom: 30px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .form-container.sign-up {
+        width: 50%;
+        margin-top: 120px;
+        margin-left: -21px;
+    }
+
+    /* Adjustments for form elements */
+    .form-container.sign-up form {
+        padding: 0 20px;
+
+    }
+
+    .form-container.sign-up .login100-form-title {
+        font-size: 20px;
+        /* Adjusted font size for smaller screens */
+        padding-bottom: 30px;
+        /* Reduced padding bottom */
+    }
+
+    .form-container.sign-up .wrap-input100 {
+        margin-bottom: 15px;
+        /* Adjusted margin bottom */
+    }
+
+    .form-container.sign-up .input100 {
+        padding: 0 15px;
+        /* Adjusted padding */
+    }
+
+    .form-container.sign-up .container-login100-form-btn {
+        padding-top: 10px;
+        /* Reduced padding top */
+    }
+
+    .form-container.sign-up .text-center.p-t-12 {
+        margin-top: 20px;
+        /* Adjusted margin top */
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .form-container.sign-in {
+        width: 50%;
+        margin: -4px;
+        margin-top: 14em;
+    }
+
+    .form-container.sign-up {
+        width: 50%;
+        margin-left: -4px;
+
+    }
+
+
+
+    .form-container.sign-in .login100-form-title,
+    .form-container.sign-up .login100-form-title {
+        font-size: 18px;
+        padding-bottom: 20px;
+    }
+
+    .form-container.sign-in .wrap-input100,
+    .form-container.sign-up .wrap-input100 {
+        margin-bottom: 10px;
+    }
+
+    .form-container.sign-in .input100,
+    .form-container.sign-up .input100 {
+        padding: 20 30px;
+    }
+
+    .container-1ogin100-form-btn {
+        padding-left: 43px;
+        padding-right: 43px;
+    }
+
+
+    .form-container.sign-up .container-1ogin100-form-btn {
+        padding-top: 5px;
+        display: block;
+    }
+
+    .form-container.sign-in .text-center.p-t-12,
+    .form-container.sign-up .text-center.p-t-12 {
+        margin-top: 10px;
+    }
+
+    .login100-pic {
+        width: 230%;
+        margin-bottom: -13px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+
+
+    .fa {
+        margin-inline-start: 75px;
+    }
+
+    .cnt {
+        display: inline;
+        width: 100%;
+        height: 55px;
+        font-size: 16px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .cnt.checkbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cnt input {
+        width: 15px;
+        height: 15px;
+        background: red;
+    }
+
+    .cnt label {
+        color: #f3ebeb;
+        user-select: none;
+        padding-left: 5px;
+    }
+
+    .cnt .pass-link {
+        color: "";
+        margin-top: -8px;
+    }
+
+    .signup-link {
+        color: #fcf6f6;
+        margin-top: 20px;
+        text-align: center;
+        display: contents;
+    }
+
+    .pass-link a,
+    .signup-link a {
+        color: #4158d0;
+        text-decoration: none;
+    }
+
+    form .pass-link a:hover,
+    form .signup-link a:hover {
+        text-decoration: underline;
+    }
+
+    .form-container.sign-in.symbol-input100 {
+        margin-inline-start: 130px;
+    }
+
+}
+
+@media (max-width:390px) {
+
+    .fa {
+        margin-inline-start: 60px;
+    }
+
+    .container-1ogin100-form-btn {
+        padding-left: 43px;
+        padding-right: 43px;
+    }
+
+    .form-container.sign-in {
+        width: 54%;
+
+        margin-top: 12em;
+    }
+
+    .form-container.sign-up {
+        width: 50%;
+        margin-left: -4px;
+
+    }
+
+
+
+    .form-container.sign-in .login100-form-title,
+    .form-container.sign-up .login100-form-title {
+        font-size: 18px;
+        padding-bottom: 20px;
+    }
+
+    .form-container.sign-in .wrap-input100,
+    .form-container.sign-up .wrap-input100 {
+        margin-bottom: 10px;
+    }
+
+    .form-container.sign-in .input100,
+    .form-container.sign-up .input100 {
+        padding: 20 30px;
+    }
+
+    .container-1ogin100-form-btn {
+        padding-left: 43px;
+        padding-right: 43px;
+    }
+
+
+
+    .form-container.sign-up .container-1ogin100-form-btn {
+        padding-top: 5px;
+        display: block;
+    }
+
+    .form-container.sign-in .text-center.p-t-12,
+    .form-container.sign-up .text-center.p-t-12 {
+        margin-top: 10px;
+    }
+
+    .login100-pic {
+        width: 230%;
+        margin-bottom: -13px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+
+
+
+    .cnt {
+        display: inline;
+        width: 100%;
+        height: 55px;
+        font-size: 16px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .cnt.checkbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cnt input {
+        width: 15px;
+        height: 15px;
+        background: red;
+    }
+
+    .cnt label {
+        color: #f3ebeb;
+        user-select: none;
+        padding-left: 5px;
+    }
+
+    .cnt .pass-link {
+        color: "";
+        margin-top: -8px;
+    }
+
+    .signup-link {
+        color: #fcf6f6;
+        margin-top: 20px;
+        text-align: center;
+        display: contents;
+    }
+
+    .pass-link a,
+    .signup-link a {
+        color: #4158d0;
+        text-decoration: none;
+    }
+
+    form .pass-link a:hover,
+    form .signup-link a:hover {
+        text-decoration: underline;
+    }
+
+    .form-container.sign-in.symbol-input100 {
+        margin-inline-start: 130px;
+    }
+
+
+
+}
