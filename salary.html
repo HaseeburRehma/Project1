@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ENCS Exchange</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: linear-gradient(to right, #5881c3, #f58634);
+        }
+
+        
+
+        
+
+        nav {
+            padding: 5px 5%;
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            z-index: 1;
+        }
+
+        .header-content nav .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content nav .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .header-content nav .logo h1 {
+            font-size: 24px;
+            color: #024359;
+        }
+
+        .header-content nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .header-content nav ul li {
+            margin: 0 10px;
+        }
+
+        .header-content nav ul li a {
+            text-decoration: none;
+            color: #024359;
+            transition: color 0.3s ease;
+        }
+
+        .header-content nav ul li a:hover {
+            color: #035c7a;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger .line {
+            width: 25px;
+            height: 3px;
+            background: #024359;
+            margin: 4px 0;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 30px;
+            margin: auto;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .card {
+            flex: 1 1 30%;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        form {
+            margin: 40px 0 20px 0;
+        }
+
+        form p {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #5881c3;
+        }
+
+        form input,
+        form select,
+        form button {
+            width: 100%;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            margin: 10px 0;
+            transition: border 0.3s ease;
+        }
+
+        form input:focus,
+        form select:focus,
+        form button:focus {
+            border: 2px solid #5881c3;
+        }
+
+        form button {
+            height: 52px;
+            color: #fff;
+            font-size: 17px;
+            cursor: pointer;
+            background: #5881c3;
+            border: none;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        form button:hover {
+            background: #85a8e0;
+            transform: translateY(-2px);
+        }
+
+        .coin-type select {
+            color: gray;
+        }
+
+        .coin-type option[value=""][disabled] {
+            display: none;
+        }
+
+        .coin-type option[value=""] {
+            color: gray;
+        }
+
+        .coin-type select:not(:focus) {
+            color: gray;
+        }
+
+        .coin-type select:focus {
+            color: black;
+        }
+
+        .coin-value {
+            font-size: 20px;
+            color: #024359;
+            margin: 20px 0;
+        }
+
+        .umrah-message {
+            font-size: 20px;
+            color: #0a7740;
+            font-weight: 600;
+            margin: 20px 0;
+        }
+
+        .salary-calculator h2,
+        .salary-result h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .salary-calculator input,
+        .salary-calculator select,
+        .salary-calculator button {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .salary-calculator button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .salary-calculator button:hover {
+            background-color: #0056b3;
+        }
+
+        .salary-result p {
+            font-size: 18px;
+            color: #444;
+            border-bottom: 1px solid #eee;
+            padding: 12px 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .salary-result p:last-child {
+            border-bottom: none;
+        }
+
+        .currency-symbol {
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        /* footer */
+
+        .main-footer {
+            /*  background: rgba(255, 255, 255, 0.9); */
+           
+            text-align: center;
+            padding: 12px 0;
+        }
+
+        .main-footer p {
+            font-size: 18px;
+            color: #024359;
+            margin-left: 40em;
+        }
+
+        .main-footer a {
+            color: #024359;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .main-footer a:hover {
+            color: #035c7a;
+        }
+
+        @media (max-width: 800px) {
+            .wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+    <header class="main-header">
+
+        <div class="header-content">
+            <nav>
+                <div class="logo">
+                    <img src="encs-loader.png" alt="logo" />
+                    <h1>ENCS Calculator</h1>
+                </div>
+            </nav>
+
+        </div>
+
+
+    </header>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="card">
+            <h2 style="background-color: #28a745 ; ">Coin Reimbursement</h2>
+            <form id="coinForm">
+
+                <div class="coin-type">
+                    <p><label for="coinType">Select Coin Type:</label></p>
+                    <select id="coinType" onchange="handleCoinTypeChange()">
+                        <option value="" disabled selected>Select a coin</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                    </select>
+                </div>
+                <div class="date-issue" id="datefield" style="display: none;">
+                    <p>Select Date of Issue</p>
+                    <input type="date" id="dateIssue">
+                    <p>Select Current Date</p>
+                    <input type="date" id="currentDate">
+                </div>
+                <div class="basic-salary" id="basicSalaryField" style="display: none;">
+                    <p>Enter Basic Salary</p>
+                    <input type="text" id="basicSalary">
+                </div>
+                <button type="button" onclick="calculateValue()">Calculate Coin Value</button>
+            </form>
+            <div class="coin-value" id="coinValue">Coin value will be displayed here.</div>
+            <div class="umrah-message" id="umrahMessage" style="display: none;">Congratulations on Umrah Package!</div>
+        </div>
+
+        <div class="card salary-calculator">
+            <h2>Salary Calculator</h2>
+            <form id="salaryForm">
+                <p>Enter Amount</p>
+                <input type="text" id="enteredAmount" placeholder="Enter amount">
+                <p><label for="timePeriod">Select Time Period:</label></p>
+                <select id="timePeriod">
+                    <option value="perHour">Per Hour</option>
+                    <option value="perDay">Per Day</option>
+                    <option value="perWeek">Per Week</option>
+                    <option value="biWeek">Bi-weekly</option>
+                    <option value="semiMonth">Semi-monthly</option>
+                    <option value="perMonth">Per Month</option>
+                    <option value="perQuarter">Per Quarter</option>
+                    <option value="perYear">Per Year</option>
+                </select>
+                <button type="button" onclick="calculateSalary()">Calculate Salary</button>
+            </form>
+        </div>
+
+        <div class="card salary-result" id="salaryResult">
+            <h2>Salary Adjustments</h2>
+            <p id="hourlyUnadjusted">Hourly:<span id="hourlyAmount">---</span></p>
+            <p id="dailyUnadjusted">Daily: <span id="dailyAmount">---</span></p>
+            <p id="weeklyUnadjusted">Weekly: <span id="weeklyAmount">---</span></p>
+            <p id="biWeeklyUnadjusted">Bi-weekly:<span id="biWeeklyAmount">---</span></p>
+            <p id="semiMonthlyUnadjusted">Semi-monthly:<span id="semiMonthlyAmount">---</span></p>
+            <p id="monthlyUnadjusted">Monthly: <span id="monthlyAmount">---</span></p>
+            <p id="quarterlyUnadjusted">Quarterly: <span id="quarterlyAmount">---</span></p>
+            <p id="annualUnadjusted">Annual: <span id="annualAmount">---</span></p>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="foot">
+            <p>&copy; 2024 ENCS Calculator | By <a href="https://encsnetworks.com" target="_blank">ENCS Networks</a>
+            </p>
+        </div>
+    </footer>
+
+
+    <script>
+        function calculateSalary() {
+            const enteredAmount = parseFloat(document.getElementById('enteredAmount').value);
+            const timePeriod = document.getElementById('timePeriod').value;
+
+            if (isNaN(enteredAmount) || enteredAmount <= 0) {
+                alert("Please enter a valid amount.");
+                return;
+            }
+
+            let daily;
+
+            switch (timePeriod) {
+                case 'perHour':
+                    daily = enteredAmount * 8;
+                    break;
+                case 'perDay':
+                    daily = enteredAmount;
+                    break;
+                case 'perWeek':
+                    daily = enteredAmount / 5;
+                    break;
+                case 'biWeek':
+                    daily = enteredAmount / 10;
+                    break;
+                case 'semiMonth':
+                    daily = enteredAmount / 15;
+                    break;
+                case 'perMonth':
+                    daily = enteredAmount * 12 / 365;
+                    break;
+                case 'perQuarter':
+                    daily = enteredAmount * 12 / (365 / 4);
+                    break;
+                case 'perYear':
+                    daily = enteredAmount / 365;
+                    break;
+                default:
+                    alert("Invalid time period selection.");
+                    return;
+            }
+
+            const hourly = daily / 8;
+            const weekly = daily * 5;
+            const biWeekly = weekly * 2;
+            const semiMonthly = (daily * 365) / 24; // 24 semi-monthly periods in a year
+            const monthly = (daily * 365) / 12;
+            const quarterly = daily * (365 / 4);
+            const annual = daily * 365;
+
+            document.getElementById('hourlyAmount').innerHTML = hourly.toFixed(2) + ' ₨';
+            document.getElementById('dailyAmount').innerHTML = daily.toFixed(2) + ' ₨';
+            document.getElementById('weeklyAmount').innerHTML = weekly.toFixed(2) + ' ₨';
+            document.getElementById('biWeeklyAmount').innerHTML = biWeekly.toFixed(2) + ' ₨';
+            document.getElementById('semiMonthlyAmount').innerHTML = semiMonthly.toFixed(2) + ' ₨';
+            document.getElementById('monthlyAmount').innerHTML = monthly.toFixed(2) + ' ₨';
+            document.getElementById('quarterlyAmount').innerHTML = quarterly.toFixed(2) + ' ₨';
+            document.getElementById('annualAmount').innerHTML = annual.toFixed(2) + ' ₨';
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const currentDate = new Date().toISOString().split('T')[0];
+            document.getElementById('currentDate').value = currentDate;
+        });
+
+        function handleCoinTypeChange() {
+            const coinType = document.getElementById('coinType').value;
+            const basicSalaryField = document.getElementById('basicSalaryField');
+            const datefield = document.getElementById('datefield');
+
+            if (coinType === 'silver') {
+                basicSalaryField.style.display = 'block';
+            } else {
+                basicSalaryField.style.display = 'none';
+            }
+
+            if (coinType === 'bronze') {
+                datefield.style.display = 'block';
+            } else {
+                datefield.style.display = 'none';
+            }
+        }
+
+        function calculateValue() {
+            const coinType = document.getElementById('coinType').value;
+            const dateIssue = new Date(document.getElementById('dateIssue').value);
+            const currentDate = new Date(document.getElementById('currentDate').value);
+            const umrahMessage = document.getElementById('umrahMessage');
+
+            let coinValue = 0;
+
+            switch (coinType) {
+                case 'bronze':
+                    coinValue = calculateBronzeValue(dateIssue, currentDate);
+                    umrahMessage.style.display = 'none';
+                    break;
+                case 'silver':
+                    const basicSalary = parseFloat(document.getElementById('basicSalary').value);
+                    coinValue = basicSalary / 2;
+                    umrahMessage.style.display = 'none';
+                    break;
+                case 'gold':
+                    coinValue = 600000;
+                    umrahMessage.style.display = 'block';
+                    break;
+                default:
+                    umrahMessage.style.display = 'none';
+            }
+
+            document.getElementById('coinValue').innerText = `The current value of the coin is ${coinValue}`;
+        }
+
+        function calculateBronzeValue(dateIssue, currentDate) {
+            const initialValue = 15000;
+            const increment = 2500;
+            const monthsDifference = (currentDate.getFullYear() - dateIssue.getFullYear()) * 12 + (currentDate.getMonth() - dateIssue.getMonth());
+
+            if (monthsDifference <= 3) {
+                return initialValue;
+            } else {
+                const additionalMonths = monthsDifference - 3;
+                return initialValue + additionalMonths * increment;
+            }
+        }
+    </script>
+
+
+
+
+
+
+    <script src="navbar.js">
+
+    </script>
+</body>
+
+</html>
